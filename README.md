@@ -31,8 +31,7 @@
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|comment_id|integer|null: false, foreign_key: true|
-|title|string|null: false|
+|message_id|integer|null: false, foreign_key: true|
 |text|text||
 |image|text||
 |created_at|integer|null: false|
@@ -42,11 +41,11 @@
 - belongs_to :group_users
 
 
-## group_usersテーブル
+## authorizationsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false|
-|user_name|string|null: false|
+|group_id|string|null: false|
 |created_at|integer|null: false|
 |update_at|integer|null: false|
 

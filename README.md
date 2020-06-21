@@ -1,5 +1,8 @@
+<<<<<<< Updated upstream
 # README
 
+=======
+>>>>>>> Stashed changes
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
@@ -21,4 +24,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
+<<<<<<< Updated upstream
 * ...
+=======
+* ...
+>>>>>>> Stashed changes

@@ -24,8 +24,12 @@ Things you may want to cover:
 
 * Deployment instructions
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 * ...
 =======
 * ...
 >>>>>>> Stashed changes
+=======
+* ... 
+>>>>>>> 4ada09a8770cd83fbcffb24a397416e88d267aff

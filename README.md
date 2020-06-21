@@ -38,7 +38,7 @@
 |update_at|integer|null: false|
 
 ### Association
-- belongs_to :group_users
+- belongs_to :authorizations
 
 
 ## authorizationsテーブル

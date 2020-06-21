@@ -45,7 +45,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false|
-|group_id|string|null: false|
+|group_id|integer|null: false|
 |message_id|integer|null: false|
 |created_at|integer|null: false|
 |update_at|integer|null: false|

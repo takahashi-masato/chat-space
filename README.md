@@ -28,25 +28,24 @@
 - has_many :messages
 
 
-## messageテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|message_id|integer|null: false, foreign_key: true|
+|authorization_id|integer|null: false, foreign_key: true|
 |text|text||
 |image|text||
 |created_at|integer|null: false|
 |update_at|integer|null: false|
 
 ### Association
-- belongs_to :authorizations
+- belongs_to :authorization
 
 
 ## authorizationsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|group_id|integer|null: false|
-|message_id|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 |created_at|integer|null: false|
 |update_at|integer|null: false|
 

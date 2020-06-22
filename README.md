@@ -1,24 +1,58 @@
 # README
 
-=======
->>>>>>> Stashed changes
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Chat-space DB設計
 
-Things you may want to cover:
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true|
+|email|string|null: false, unique: true|
+|password|string|null: false, unique: true|
+|created_at|integer|null: false|
+|update_at|integer|null: false|
 
-* Ruby version
+### Association
+- has_many :groups, through: user_groups
+- has_many :messages
+- has_many :user_groups
 
-* System dependencies
 
-* Configuration
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true|
+|created_at|integer|null: false|
+|update_at|integer|null: false|
 
-* Database creation
+### Association
+- has_many :users, through: user_groups
+- has_many :messages
+- has_many :user_groups
 
-* Database initialization
 
-* How to run the test suite
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|text|text||
+|image|text||
+|created_at|integer|null: false|
+|update_at|integer|null: false|
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- belongs_to :user
+- belongs_to :group
 
-* Deployment instructions
+
+## user_groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|created_at|integer|null: false|
+|update_at|integer|null: false|
+
+### Association
+- belongs_to :user
+- belongs_to :group

@@ -12,6 +12,7 @@
 |update_at|integer|null: false|
 
 ### Association
+- has_many :groups, through: authorizations
 - has_many :messages, through: authorizations
 - has_many :authorizations
 
@@ -24,6 +25,7 @@
 |update_at|integer|null: false|
 
 ### Association
+- has_many :users, through: authorizations
 - has_many :messages, through: authorizations
 - has_many :authorizations
 

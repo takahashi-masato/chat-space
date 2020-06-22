@@ -12,9 +12,9 @@
 |update_at|integer|null: false|
 
 ### Association
-- has_many :groups, through: authorizations
-- has_many :messages, through: authorizations
-- has_many :authorizations
+- has_many :groups, through: user_groups
+- has_many :messages, through: user_groups
+- has_many :user_groups
 
 
 ## groupsテーブル
@@ -25,9 +25,9 @@
 |update_at|integer|null: false|
 
 ### Association
-- has_many :users, through: authorizations
-- has_many :messages, through: authorizations
-- has_many :authorizations
+- has_many :users, through: user_groups
+- has_many :messages, through: user_groups
+- has_many :user_groups
 
 
 ## messagesテーブル
@@ -41,10 +41,10 @@
 |update_at|integer|null: false|
 
 ### Association
-- belongs_to :authorization
+- belongs_to :user_group
 
 
-## authorizationsテーブル
+## user_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|

@@ -15,6 +15,7 @@
 - has_many :messages, through: authorizations
 - has_many :authorizations
 
+
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
